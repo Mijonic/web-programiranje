@@ -1,0 +1,57 @@
+﻿@using ProdajaVozila.Models
+@model IEnumerable<Kupovina>
+
+
+
+
+
+<h2>Kupili ste sledeca vozila:</h2>
+<p>@ViewBag.Message</p>
+
+
+<table border="1" class="table">
+
+    <tr>
+
+        <th> Marka </th>
+        <th> Model </th>
+        <th> &Scaron;asija </th>
+        <th> Boja </th>
+        <th> Broj vrata </th>
+        <th> Opis </th>
+        <th> Vrsta goriva </th>
+        <th> Cena </th>
+        <th> Datum kupovine</th>
+        <th> Naplacena cena </th>
+
+
+
+
+
+    </tr>
+
+    @foreach (Kupovina v in Model)
+    {
+        <tr>
+            <td> @v.Vozilo.MarkaVozila </td>
+            <td> @v.Vozilo.Model </td>
+            <td> @v.Vozilo.OznakaSasije </td>
+            <td> @v.Vozilo.Boja </td>
+            <td> @v.Vozilo.BrojVrata </td>
+            <td> @v.Vozilo.Opis </td>
+            <td> @v.Vozilo.VrstaGoriva </td>
+            <td> @v.Vozilo.Cena </td>
+            <td> @v.DatumKupovine.ToString("dd/MM/yyyy") </td>
+            <td> @v.NaplacenaCena </td>
+            
+
+
+        </tr>
+    }
+
+</table>
+
+<br />
+<br />
+
+<a href="~/Soping/Index">Vratite se na kupac Menu.</a>

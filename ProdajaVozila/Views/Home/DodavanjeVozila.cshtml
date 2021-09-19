@@ -1,0 +1,90 @@
+﻿<h2>Dodavanje vozila</h2>
+
+
+<div>
+    @ViewBag.Message
+</div>
+
+<form action="~/Home/DodavanjeVozila" method="post">
+
+
+
+
+    <table>
+
+        <tr>
+            <td>Marka vozila: </td>
+            <td><input type="text" name="markaVozila" /></td>
+        </tr>
+
+
+
+        <tr>
+            <td> Model: </td>
+            <td><input type="text" name="model" /></td>
+        </tr>
+
+
+        <tr>
+            <td> Oznaka sasije: </td>
+            <td><input type="text" name="oznakaSasije" /></td>
+        </tr>
+
+        <tr>
+            <td>Boja: </td>
+            <td><input type="text" name="boja" /></td>
+        </tr>
+
+        <tr>
+            <td> Broj vrata: </td>
+            <td>
+                <input type="text" name="brojVrata" />
+            </td>
+
+
+        </tr>
+
+        <tr>
+            <td> Opis: </td>
+            <td><input type="text" name="opis" /></td>
+
+        </tr>
+
+        <tr>
+            <td> Vrsta goriva </td>
+            <td>
+                
+                <select id="gorivo"  name="vrstaGoriva">
+                    <option value="BENZIN">Benzin</option>
+                    <option value="DIZEL">DIZEL</option>
+                    <option value="BENZIN_GAS">BENZIN+GAS</option>
+                    <option value="METAN">METAN</option>
+                    <option value="ELEKTRICNI_POGON">ELEKTRICNI POGON</option>
+                    <option value="HIBRIDNI">HIBRIDNI</option>
+
+                </select>
+            </td>
+        </tr>
+
+       
+
+        <tr>
+            <td> Cena </td>
+            <td><input type="text" name="cena" /></td>
+        </tr>
+
+
+
+        <tr>
+            <td> <input type="submit" value="Dodaj vozilo" /></td>
+        </tr>
+
+
+    </table>
+
+
+</form>
+
+<br /><br />
+
+<a href="~/Home/AdminPrikaz">Vrati se na admin Menu</a>

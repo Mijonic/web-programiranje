@@ -1,0 +1,5 @@
+mijonic|mijonic98|Nikola|Mijonic|MUSKI|nikolamijonic@gmail.com|03/06/1998|ADMINISTRATOR|False|False
+marko|markovic|Marko|Markovic|MUSKI|marko@gmail.com|21/05/1998|ADMINISTRATOR|False|False
+Petar|Petrovic|Petar|Petrovic|MUSKI|petarpetrovic@gmail.com|14/03/1995|KUPAC|False|False
+Jelena|JelaJela|Jelena|Jelenic|ZENSKI|jelajela@gmail.com|01/07/1994|KUPAC|False|False
+Zorana|ZoranaZorka|Zorana|Zoranic|ZENSKI|zokazoka@gmail.com|26/06/1993|KUPAC|False|True

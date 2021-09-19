@@ -1,0 +1,52 @@
+﻿@using ProdajaVozila.Models
+
+
+
+<h2>Detalji izabranog vozila</h2>
+
+
+
+<table border="1" class="table">
+
+    <tr>
+
+        <th> Marka </th>
+        <th> Model </th>
+        <th> &Scaron;asija </th>
+        <th> Boja </th>
+        <th> Broj vrata </th>
+        <th> Opis </th>
+        <th> Vrsta goriva </th>
+        <th> Cena </th>
+
+
+
+    </tr>
+  
+    
+     <tr>
+            <td> @Model.MarkaVozila </td>
+            <td> @Model.Model </td>
+            <td> @Model.OznakaSasije </td>
+            <td> @Model.Boja </td>
+            <td> @Model.BrojVrata </td>
+            <td> @Model.Opis </td>
+            <td> @Model.VrstaGoriva </td>
+            <td> @Model.Cena </td>
+            <td>
+                <form method="post" action="~/Soping/KupiVozilo">
+                    <input type="text" name="oznakaSasije" value="@Model.OznakaSasije" hidden />
+                    <input type="submit" value="Kupi" />
+                </form>
+            </td>
+
+
+    </tr>
+    
+
+</table>
+
+<br />
+<br />
+
+<a href="~/Soping/PrikazVozilaProdaja">Povratak na pregled vozila koja se prodaju.</a>

@@ -1,0 +1,43 @@
+﻿@using ProdajaVozila.Models
+@model IEnumerable<Vozilo>
+
+
+
+<h3> Rezultati pretrage po @ViewBag.kriterijumPretrage </h3>
+
+<table border="1" class="table">
+
+    <tr>
+
+        <th> Marka </th>
+        <th> Model </th>
+        <th> &Scaron;asija </th>
+        <th> Boja </th>
+        <th> Broj vrata </th>
+        <th> Opis </th>
+        <th> Vrsta goriva </th>
+        <th> Cena </th>
+        <th> Stanje </th>
+
+
+    </tr>
+
+    @foreach (Vozilo v in Model)
+    {
+        <tr>
+            <td> @v.MarkaVozila </td>
+            <td> @v.Model </td>
+            <td> @v.OznakaSasije </td>
+            <td> @v.Boja </td>
+            <td> @v.BrojVrata </td>
+            <td> @v.Opis </td>
+            <td> @v.VrstaGoriva </td>
+            <td> @v.Cena </td>
+            <td> @v.NaStanju </td>
+
+        </tr>
+    }
+
+</table>
+<br />
+<a href="~/Home/Index">Vrati se na pocetnu stranicu.</a>

@@ -1,0 +1,7 @@
+BMW|M3|123-456-skgq-123|crvena|3|Sve je odlicno.|BENZIN|85000|False
+Tesla|S|111-111-111|Teget|3|Mala potrosnja.|ELEKTRICNI_POGON|80000|False
+AUDI|A4|789-789-789|zelena|5|Garaziran.|DIZEL|7800|True
+Fiat|Punto|999-999-999|Roza|3|Jeftinoo!|METAN|800|True
+Skoda|Octavia|222-222-222|Plava|5|Odlican primerak!|BENZIN_GAS|4300|True
+AUDI|S5|123-123-123|Zuta|5|Perfektan.|DIZEL|32000|False
+Skoda|Fabia|456-456-123|Crna|3|Solidan.|BENZIN_GAS|2500|False

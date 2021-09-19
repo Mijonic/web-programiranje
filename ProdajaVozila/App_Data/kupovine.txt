@@ -1,0 +1,4 @@
+Petar|Petrovic|Petar|Petrovic|MUSKI|petarpetrovic@gmail.com|14/03/1995|KUPAC|False|False|BMW|M3|123-456-skgq-123|crvena|3|Sve je odlicno.|BENZIN|85000|False|29/05/2020|85000
+Jelena|JelaJela|Jelena|Jelenic|ZENSKI|jelajela@gmail.com|01/07/1994|KUPAC|False|False|Tesla|S|111-111-111|Teget|3|Mala potrosnja.|ELEKTRICNI_POGON|80000|False|29/05/2020|80000
+Petar|Petrovic|Petar|Petrovic|MUSKI|petarpetrovic@gmail.com|14/03/1995|KUPAC|False|False|AUDI|S5|123-123-123|Zuta|5|Perfektan.|DIZEL|32000|False|29/05/2020|32000
+Jelena|JelaJela|Jelena|Jelenic|ZENSKI|jelajela@gmail.com|01/07/1994|KUPAC|False|False|Skoda|Fabia|456-456-123|Crna|3|Solidan.|BENZIN_GAS|2500|False|29/05/2020|2500

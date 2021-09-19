@@ -1,0 +1,80 @@
+﻿@using ProdajaVozila.Models
+
+
+
+
+
+
+<h2>Pregled vozila u sistemu i njihovih kupaca.</h2>
+
+
+
+<table border="1" class="table">
+
+    <tr>
+
+        <th> Marka </th>
+        <th> Model </th>
+        <th> &Scaron;asija </th>
+        <th> Boja </th>
+        <th> Broj vrata </th>
+        <th> Opis </th>
+        <th> Vrsta goriva </th>
+        <th> Cena </th>
+        <th> Username </th>
+        <th> Password </th>
+        <th> Ime </th>
+        <th> prezime </th>
+        <th> Pol </th>
+        <th> Email </th>
+        <th> Datum Rodjenja </th>
+        
+
+
+
+    </tr>
+
+    @foreach (Vozilo v in Model.Vozila)
+    {
+    <tr>
+        <td> @v.MarkaVozila </td>
+        <td> @v.Model </td>
+        <td> @v.OznakaSasije </td>
+        <td> @v.Boja </td>
+        <td> @v.BrojVrata </td>
+        <td> @v.Opis </td>
+        <td> @v.VrstaGoriva </td>
+        <td> @v.Cena </td>
+
+        @if (!v.NaStanju)
+        {
+            foreach (Kupovina k in Model.Kupovine)
+            {
+                if (k.Vozilo.OznakaSasije.Equals(v.OznakaSasije))
+                {
+                    <td> @k.Kupac.Username</td>  
+                    <td> @k.Kupac.Password </td>
+                    <td> @k.Kupac.Ime </td>
+                    <td> @k.Kupac.Prezime </td>
+                    <td> @k.Kupac.Pol </td>
+                    <td> @k.Kupac.Email </td>
+                    <td> @k.Kupac.DatumRodjenja.ToString("dd/MM/yyyy") </td>
+                    
+
+                    break;
+                }
+
+            }
+        }
+
+
+
+    </tr>
+    }
+
+</table>
+
+<br />
+<br />
+
+<a href="~/Home/AdminPrikaz">Vrati se admin Menu.</a>

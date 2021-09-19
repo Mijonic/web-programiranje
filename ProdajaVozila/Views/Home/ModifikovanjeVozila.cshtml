@@ -1,0 +1,144 @@
+﻿<h2>Modifikovanje vozila</h2>
+
+
+
+<p>@ViewBag.Message</p>
+ 
+ 
+<form method="post"  action="~/Home/ModifikacijaPostojecegVozila" >
+
+
+
+
+    <table>
+
+        <tr>
+            <td>Marka vozila: </td>
+            <td><input type="text" name="markaVozila" value="@Model.MarkaVozila" /></td>
+        </tr>
+
+
+
+        <tr>
+            <td> Model: </td>
+            <td><input type="text" name="model" value="@Model.Model"  /></td>
+        </tr>
+
+
+        <tr>
+            <td> Oznaka sasije: </td>
+            <td><input type="text" name="oznakaSasije" value="@Model.OznakaSasije" /></td>
+        </tr>
+
+        <tr>
+            <td>Boja: </td>
+            <td><input type="text" name="boja" value="@Model.Boja" /></td>
+        </tr>
+
+        <tr>
+            <td> Broj vrata: </td>
+            <td>
+                <input type="text" name="brojVrata" value="@Model.BrojVrata" />
+            </td>
+
+
+        </tr>
+
+        <tr>
+            <td> Opis: </td>
+            <td><input type="text" name="opis" value="@Model.Opis"/></td>
+
+        </tr>
+
+        <tr>
+            <td> Vrsta goriva </td>
+            <td>
+
+                <select id="gorivo" name="vrstaGoriva">
+                    @if (Model.VrstaGoriva.ToString() == "BENZIN")
+                    {
+                        <option value="BENZIN" selected>Benzin</option>
+                    }
+                    else
+                    {
+                        <option value="BENZIN">Benzin</option>
+                    }
+
+                    @if (Model.VrstaGoriva.ToString() == "DIZEL")
+                    {
+                        <option value="DIZEL" selected>DIZEL</option>
+                    }
+                    else
+                    {
+                        <option value="DIZEL">DIZEL</option>
+                    }
+
+                    @if (Model.VrstaGoriva.ToString() == "BENZIN_GAS")
+                    {
+                        <option value="BENZIN_GAS" selected>BENZIN+GAS</option>
+                    }
+                    else
+                    {
+                        <option value="BENZIN_GAS">BENZIN+GAS</option>
+                    }
+
+                    @if (Model.VrstaGoriva.ToString() == "METAN")
+                    {
+                        <option value="METAN" selected>METAN</option>
+                    }
+                    else
+                    {
+                        <option value="METAN">METAN</option>
+                    }
+
+                    @if (Model.VrstaGoriva.ToString() == "ELEKTRICNI_POGON")
+                    {
+                        <option value="ELEKTRICNI_POGON" selected>ELEKTRICNI POGON</option>
+                    }
+                    else
+                    {
+                        <option value="ELEKTRICNI_POGON">ELEKTRICNI POGON</option>
+                    }
+
+                    @if (Model.VrstaGoriva.ToString() == "HIBRIDNI")
+                    {
+                        <option value="HIBRIDNI" selected>HIBRIDNI</option>
+                    }
+                    else
+                    {
+                        <option value="HIBRIDNI">HIBRIDNI</option>
+                    }
+
+
+
+
+
+
+
+                
+
+                </select>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td> Cena </td>
+            <td><input type="text" name="cena" value="@Model.Cena" /></td>
+        </tr>
+
+
+
+        <tr>
+            <td> <input type="submit" value="Modifikuj" /></td>
+        </tr>
+
+
+    </table>
+
+
+</form>
+
+<br /><br />
+<a href="~/Home/Modifikovanje">Vrati se na izbor vozila za modifikaciju</a>

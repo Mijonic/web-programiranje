@@ -1,0 +1,135 @@
+﻿@using ProdajaVozila.Models
+@model IEnumerable<Vozilo>
+
+
+
+<h2>Vozila koja su na prodaju</h2>
+
+
+
+<table border="1" class="table">
+
+    <tr>
+
+        <th> Marka </th>
+        <th> Model </th>
+        <th> &Scaron;asija </th>
+        <th> Boja </th>
+        <th> Broj vrata </th>
+        <th> Opis </th>
+        <th> Vrsta goriva </th>
+        <th> Cena </th>
+       
+
+
+    </tr>
+
+    @foreach (Vozilo v in Model)
+    {
+        <tr>
+            <td> @v.MarkaVozila </td>
+            <td> @v.Model </td>
+            <td> @v.OznakaSasije </td>
+            <td> @v.Boja </td>
+            <td> @v.BrojVrata </td>
+            <td> @v.Opis </td>
+            <td> @v.VrstaGoriva </td>
+            <td> @v.Cena </td>
+            
+
+        </tr>
+    }
+
+</table>
+
+<br />
+<br />
+
+<h4>Sortiranje po nekom od sledecih kriterijuma</h4>
+
+<form action="~/Home/Sortiraj">
+
+    <input type="radio" name="nacin" value="marka" checked>
+    <label> Sortiranje po marki </label><br>
+
+    <input type="radio" name="nacin" value="model">
+    <label> Sortiranje po modelu </label><br>
+
+    <input type="radio" name="nacin" value="cena">
+    <label> Sortiranje po ceni </label><br>
+
+    <br />
+    <label> Rastoce ili opadajuce </label><br />
+
+    <input type="radio" name="sort" value="rastuce" checked>
+    <label> Rastuce </label><br>
+
+    <input type="radio" name="sort" value="opadajuce">
+    <label> Opadajuce </label><br><br />
+
+
+
+
+    <input type="submit" value=" Sortiraj ">
+
+</form>
+
+<br />
+<br />
+
+
+<h4>Pretraga vozila po marki</h4>
+
+<form action="~/Home/Pretraga">
+
+    <label for="marka"> Marka </label>
+    <input type="text" name="marka" />
+
+    <input type="submit" value=" Pretrazi po marki ">
+
+</form>
+
+
+
+
+
+<br />
+<br />
+
+
+
+<h4>Pretraga vozila po modelu</h4>
+
+<form action="~/Home/Pretraga">
+
+    <label for="model"> Model </label>
+    <input type="text" name="model" />
+
+    <input type="submit" value=" Pretrazi po modelu ">
+
+
+</form>
+
+<br />
+<br />
+
+<h4>Pretraga vozila po ceni</h4>
+
+<form action="~/Home/Pretraga">
+
+    <label for="cenaDonja"> Od ove cene </label>
+    <input type="text" name="cenaDonja" />
+    <br />
+    <label for="cenaGornja"> Do ove cene </label>
+    <input type="text" name="cenaGornja" />
+    <br /><br />
+
+    <input type="submit" value=" Pretrazi po ceni ">
+
+
+</form>
+
+
+
+
+

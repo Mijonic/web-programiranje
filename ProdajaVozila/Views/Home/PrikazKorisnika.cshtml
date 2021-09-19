@@ -1,0 +1,47 @@
+﻿@using ProdajaVozila.Models
+@model IEnumerable<Korisnik>
+
+
+<h2>Prikaz kupaca</h2>
+
+
+
+<table border="1" class="table">
+
+    <tr>
+
+        <th> Username </th>
+        <th> Password </th>
+        <th> Ime </th>
+        <th> prezime </th>
+        <th> Pol </th>
+        <th> Email </th>
+        <th> Datum Rodjenja </th>
+        <th> Uloga </th>
+
+
+
+    </tr>
+
+    @foreach (Korisnik k in Model)
+    {
+        <tr>
+            <td> @k.Username </td>
+            <td> @k.Password </td>
+            <td> @k.Ime </td>
+            <td> @k.Prezime </td>
+            <td> @k.Pol </td>
+            <td> @k.Email </td>
+            <td> @k.DatumRodjenja.ToString("dd/MM/yyyy") </td>
+            <td> @k.Uloga</td>
+            <td> <a href="~/Home/LogickiObrisi?username=@k.Username">Logicki obrisi</a> </td>
+
+        </tr>
+    }
+
+</table>
+
+<br />
+<br />
+
+<a href="~/Home/AdminPrikaz">Vratite se na admin MENU.</a>
